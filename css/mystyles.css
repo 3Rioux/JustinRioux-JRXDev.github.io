@@ -1,0 +1,207 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2D0712;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Portfolio Grid */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+
+/* Project Box Styling */
+.projectPage-box {
+    position: relative;
+    background: #ffffff1a;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    text-align: center;
+    cursor: pointer;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover Effects */
+.project-box:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    transform: scale(1.1);
+}
+
+.project-box:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0.2;
+}
+
+/* Modal (Expanded Box) */
+/* .modal {
+    display: none;
+    position: fixed;
+    /* top: 15%;
+    bottom: 5%;
+    left: 0; *
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.8);
+    /* overflow: auto; *
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    align-items: center;
+    /* position: sticky; *
+    background: linear-gradient(135deg, #911f43f4,#731A3A); /* Gradient from deep pink to lighter pink */
+    /* background: #C21E56; *
+    /* background: #C21E56; *
+    /* background: #C21E56; *
+    color: #fff;
+    top: 10%;
+    bottom: 5%;
+    width: 98%;
+    height: 98%;
+    max-width: 1200px;
+    padding: 20px 5%;
+    border-radius: 10px;
+    
+
+    /* Ensure it expands with content *
+    height: auto;
+    max-height: 90vh; /* Prevents it from getting too tall *
+    overflow-y: auto; /* Enables scrolling if content exceeds max-height *
+} */
+
+/* .modal {
+     display: flex;
+    position:-webkit-sticky;
+    width: 100%;
+    height: 100%;
+    background: #0000003c;
+    top: 15%; 
+    justify-content: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+} */
+
+.modal-content {
+    margin: 0;
+    position: absolute;
+    
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    /* inset: 5px 37% 10px; top left/right bottom */
+    background: linear-gradient(135deg, #911f43f4,#731A3A); /* Gradient from deep pink to lighter pink */
+    /* background: #C21E56; */
+    /* background: #C21E56; */
+    /* background: #C21E56; */
+    /* color: #fff; */
+
+    /* left: 37%; */
+    /* padding-top: 2%; */
+     padding-bottom: 5%;
+     padding-left: 2%;
+    padding-right: 2%;  
+
+    width: 50%;
+
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: chartreuse;
+
+    /* Ensure it expands with content */
+    height: clamp(1500px, anchor-size(width));;
+    /* max-height: 37%;  Prevents it from getting too tall */
+    overflow-y:scroll; /* Enables scrolling if content exceeds max-height */
+}
+
+/* Title and Links Container */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links Container */
+.modal-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Link Icons */
+.modal-links a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+    transition: transform 0.2s, color 0.3s;
+}
+
+.modal-links a:hover {
+    transform: scale(1.2);
+    color: #FF69B4;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 500%;
+    cursor: pointer;
+}
+
+/* Modal Sections */
+.modal-section {
+    margin-top: 20px;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#image-container {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #444;
+}

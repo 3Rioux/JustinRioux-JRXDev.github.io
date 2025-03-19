@@ -914,8 +914,9 @@ a.brand:focus {
   padding-left: 15%;
   overflow-x: hidden;
   overflow-y: auto;
+  /* overflow: scroll; */
   -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
+  /* overflow-scrolling: touch; */
   font-weight: 600;
   letter-spacing: -0.025rem;
   list-style: none;
@@ -2126,7 +2127,7 @@ a.brand:focus {
 
 .vertical-title span {
   display: block;
-  float: right;
+  float: center;
 }
 
 .section .intro {
@@ -5073,7 +5074,7 @@ a.brand:focus {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
+  /* overflow-scrolling: touch; */
   font-weight: 600;
   letter-spacing: -0.025rem;
   list-style: none;
