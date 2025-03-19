@@ -32,7 +32,7 @@ document.querySelectorAll(".projectPage-box").forEach(box => {
     box.addEventListener("click", () => {
         // Focus on popup 
         document.getElementById("modal-title").focus();
-        
+
         // Populate modal
         document.getElementById("modal-title").textContent = box.dataset.title;
         document.getElementById("modal-team").textContent = box.dataset.team;
@@ -97,6 +97,23 @@ function updateImage() {
 
 
 
+// === Calculate Screen Space ===
+function adjustModalHeight() {
+    const header = document.querySelector("header");
+    const footer = document.querySelector("footer");
+    const modalContent = document.querySelector(".modal-content");
 
+    if (header && footer) {
+        const headerHeight = header.offsetHeight + 100;
+        const footerHeight = footer.offsetHeight;
+        const availableHeight = window.innerHeight - headerHeight - footerHeight;
+
+        modalContent.style.maxHeight = availableHeight + "px";
+    }
+}
+
+// Adjust on load and window resize
+window.addEventListener("load", adjustModalHeight);
+window.addEventListener("resize", adjustModalHeight);
 
 

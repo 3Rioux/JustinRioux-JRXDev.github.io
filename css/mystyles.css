@@ -49,93 +49,37 @@ body {
 }
 
 /* Modal (Expanded Box) */
-/* .modal {
+.modal {
     display: none;
     position: fixed;
-    /* top: 15%;
-    bottom: 5%;
-    left: 0; *
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    background: rgba(0, 0, 0, 0.8);
-    /* overflow: auto; *
+    height: 100%;
+    background: #2d0712c7;
+    overflow: auto;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    align-items: center;
-    /* position: sticky; *
-    background: linear-gradient(135deg, #911f43f4,#731A3A); /* Gradient from deep pink to lighter pink */
-    /* background: #C21E56; *
-    /* background: #C21E56; *
-    /* background: #C21E56; *
+    background: linear-gradient(135deg, #392140,#2D0712); /* Gradient from deep pink to lighter pink */
     color: #fff;
-    top: 10%;
-    bottom: 5%;
-    width: 98%;
-    height: 98%;
-    max-width: 1200px;
-    padding: 20px 5%;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
     border-radius: 10px;
-    
-
-    /* Ensure it expands with content *
-    height: auto;
-    max-height: 90vh; /* Prevents it from getting too tall *
-    overflow-y: auto; /* Enables scrolling if content exceeds max-height *
-} */
-
-/* .modal {
-     display: flex;
-    position:-webkit-sticky;
-    width: 100%;
-    height: 100%;
-    background: #0000003c;
-    top: 15%; 
-    justify-content: center;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center
-} */
-
-.modal-content {
-    margin: 0;
-    position: absolute;
-    
-    top: 60%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    
-    /* inset: 5px 37% 10px; top left/right bottom */
-    background: linear-gradient(135deg, #911f43f4,#731A3A); /* Gradient from deep pink to lighter pink */
-    /* background: #C21E56; */
-    /* background: #C21E56; */
-    /* background: #C21E56; */
-    /* color: #fff; */
-
-    /* left: 37%; */
-    /* padding-top: 2%; */
-     padding-bottom: 5%;
-     padding-left: 2%;
-    padding-right: 2%;  
-
-    width: 50%;
-
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: chartreuse;
+    position: relative;
 
     /* Ensure it expands with content */
-    height: clamp(1500px, anchor-size(width));;
-    /* max-height: 37%;  Prevents it from getting too tall */
-    overflow-y:scroll; /* Enables scrolling if content exceeds max-height */
+    height: auto;
+    max-height: 90vh; /* Prevents it from getting too tall */
+    overflow-y: auto; /* Enables scrolling if content exceeds max-height */
 }
 
 /* Title and Links Container */
 .modal-header {
+    background: linear-gradient(135deg, #000000d9,#2D0712); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -163,6 +107,7 @@ body {
 /* Close Button */
 .close {
     position: absolute;
+    color: #ffffff;
     top: 10px;
     right: 20px;
     font-size: 500%;
@@ -192,7 +137,7 @@ body {
     border-radius: 10px;
 }
 
-button {
+.button-close {
     background: #000;
     color: #fff;
     border: none;
@@ -202,6 +147,6 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+.button-close:hover {
     background: #444;
 }
