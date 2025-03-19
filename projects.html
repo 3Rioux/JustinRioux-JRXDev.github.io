@@ -18,7 +18,7 @@
     <link href="css/scss/cssAnim.scss" rel="stylesheet">
 
     <link rel="stylesheet/less" type="text/css" href="css/less/styleLess.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
 
 
     <!-- <script src="assets/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/js/brands.min.js"></script> -->
@@ -212,7 +212,7 @@
                                                 <p>Role: Frontend Developer</p>
                                             </div>
                                             <!-- -------- Project BOX -------- -->
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -232,7 +232,7 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -252,7 +252,7 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -272,7 +272,7 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -292,7 +292,7 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -312,7 +312,7 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -332,7 +332,7 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="Website" data-team="3"
                                                 data-role="Frontend Developer"
                                                 data-skills="Responsive Design, API Integration, UI/UX"
@@ -352,11 +352,12 @@
                                                 <p>Team Size: 3</p>
                                                 <p>Role: Frontend Developer</p>
                                             </div>
-                                            
+
                                             <div class="projectPage-box" data-title="My Portfolio Website" data-team="3"
                                                 data-role="Front-end & Back-end Developer"
                                                 data-skills="Responsive Design, UI/UX Design"
-                                                data-tools="HTML, CSS, JavaScript, AI Image Generation (Canvas Dream Lab & Dall-E 3), Visual Studio Code (Favorite Attachents Used: Live Preview)" data-links='{
+                                                data-tools="HTML, CSS, JavaScript, AI Image Generation (Canvas Dream Lab & Dall-E 3), Visual Studio Code (Favorite Attachents Used: Live Preview)"
+                                                data-links='{
                                                         "GitHub": "https://github.com/example",
                                                         "Itch.io": "https://itch.io/example",
                                                         "Portfolio": "https://www.frederictonregionmuseum.com/"
@@ -376,46 +377,50 @@
                                         </section>
                                         <!-- Expanded Project Modal -->
                                         <div id="project-modal" class="modal">
+                                           
+                                                <div class="modal-content">
+                                                    <!-- <div> -->
+                                                        <!-- <span class="button-close">&times;</span> -->
+                                                        <!-- <span class="close"><a class="close-button-less">Close</a></span> -->
+                                                    <!-- </div> -->
 
-                                            <div class="modal-content">
-                                                <!-- <span class="button-close">&times;</span> -->
-                                                <span class="close"><a class="close-button-less">Close</a></span>
-                                                
-                                                <!-- <h2 id="modal-title"></h2> -->
-                                                <div class="modal-header">
-                                                    <h2 id="modal-title"></h2>
-                                                    <div class="modal-links" id="modal-links"></div>
+                                                    <!-- <h2 id="modal-title"></h2> -->
+                                                    <div class="modal-header">
+                                                        <h2 id="modal-title"></h2>
+                                                        <div class="modal-links" id="modal-links"></div>
+                                                    </div>
+                                                    <h2><strong>Team Size:</strong> <span id="modal-team"></span></h2>
+                                                    <p><strong>Role:</strong> <span id="modal-role"></span></p>
+
+                                                    <!-- Links -->
+                                                    <div class="modal-section">
+                                                        <h3>Related Links</h3>
+                                                        <ul id="modal-links"></ul>
+                                                    </div>
+
+                                                    <!-- Image Carousel -->
+                                                    <div class="carousel">
+                                                        <button id="prev-btn">&#10094;</button>
+                                                        <div id="image-container"></div>
+                                                        <button id="next-btn">&#10095;</button>
+                                                    </div>
+
+                                                    <!-- Skills -->
+                                                    <div class="modal-section">
+                                                        <h3>Skills Learned</h3>
+                                                        <p id="modal-skills"></p>
+                                                    </div>
+
+                                                    <!-- Tools Used -->
+                                                    <div class="modal-section">
+                                                        <h3>Tools & Technologies</h3>
+                                                        <p id="modal-tools"></p>
+                                                    </div>
+
+                                                    <!-- <span class="popupCloseButton"><a class="close-button-less">Close</a></span> -->
+                                                    <span class="close"><a class="close-button-less">Close</a></span>
                                                 </div>
-                                                <h2><strong>Team Size:</strong> <span id="modal-team"></span></h2>
-                                                <p><strong>Role:</strong> <span id="modal-role"></span></p>
-
-                                                <!-- Links -->
-                                                <div class="modal-section">
-                                                    <h3>Related Links</h3>
-                                                    <ul id="modal-links"></ul>
-                                                </div>
-
-                                                <!-- Image Carousel -->
-                                                <div class="carousel">
-                                                    <button id="prev-btn">&#10094;</button>
-                                                    <div id="image-container"></div>
-                                                    <button id="next-btn">&#10095;</button>
-                                                </div>
-
-                                                <!-- Skills -->
-                                                <div class="modal-section">
-                                                    <h3>Skills Learned</h3>
-                                                    <p id="modal-skills"></p>
-                                                </div>
-
-                                                <!-- Tools Used -->
-                                                <div class="modal-section">
-                                                    <h3>Tools & Technologies</h3>
-                                                    <p id="modal-tools"></p>
-                                                </div>
-
-
-                                            </div>
+                                            
                                         </div>
 
 

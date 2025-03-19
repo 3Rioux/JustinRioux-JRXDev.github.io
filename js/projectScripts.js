@@ -23,7 +23,9 @@ const linkIcons = {
 
 //Expanding project box 
 const modal = document.getElementById("project-modal");
+const modalContent = document.querySelector(".modal-content");
 const closeBtn = document.querySelector(".close");
+// const closeBtn = document.querySelector(".popupCloseButton");
 const imageContainer = document.getElementById("image-container");
 let currentImageIndex = 0;
 let images = [];
@@ -75,10 +77,32 @@ document.querySelectorAll(".projectPage-box").forEach(box => {
     });
 });
 
-// Close Modal
-closeBtn.addEventListener("click", () => {
+//Closing Events:
+// Function to close modal
+function closeModal() {
     modal.style.display = "none";
+}
+
+// Close modal when clicking outside the modal-content
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
 });
+
+// Close modal when pressing the Esc key
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+
+// Close Modal close button click 
+closeBtn.addEventListener("click", () => {
+    closeModal();
+});
+
+
 
 // Image Navigation
 document.getElementById("prev-btn").addEventListener("click", () => {

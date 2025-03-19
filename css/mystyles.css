@@ -76,7 +76,7 @@ body {
     height: auto;
     max-height: 90vh; /* Prevents it from getting too tall */
     overflow-y: auto; /* Enables scrolling if content exceeds max-height */
-    overflow-x: visible;
+    overflow-x: hidden;
 }
 
 /* Title and Links Container */
@@ -85,6 +85,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 /* Links Container */
@@ -111,11 +112,50 @@ body {
     background-color: #392140;
     position: absolute;
     color: #ffffff;
-    top: 10px;
-    right: 20px;
+    top: -20px;
+    right: -20px;
     font-size: 500%;
+    z-index: 10;
     cursor: pointer;
 }
+
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+/* Close Button Styling */
+/* .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 10; 
+    transition: background 0.3s, transform 0.2s;
+} */
+
+/* .close a {
+    text-decoration: none;
+    color: inherit;
+} */
 
 /* Modal Sections */
 .modal-section {
