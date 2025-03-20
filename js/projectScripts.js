@@ -33,7 +33,7 @@ let images = [];
 document.querySelectorAll(".projectPage-box").forEach(box => {
     box.addEventListener("click", () => {
         // Focus on popup 
-        document.getElementById("modal-title").focus();
+        // document.getElementById("modal-title").focus();
 
         // Populate modal
         document.getElementById("modal-title").textContent = box.dataset.title;
