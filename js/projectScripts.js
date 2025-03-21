@@ -30,6 +30,7 @@ const imageContainer = document.getElementById("image-container");
 let currentImageIndex = 0;
 let images = [];
 
+//Project Page - click project events
 document.querySelectorAll(".projectPage-box").forEach(box => {
     box.addEventListener("click", () => {
         // Focus on popup 
@@ -80,6 +81,8 @@ document.querySelectorAll(".projectPage-box").forEach(box => {
 //Closing Events:
 // Function to close modal
 function closeModal() {
+    // modal.scrollIntoView({ behavior: 'smooth' });
+    modal.scrollTop;
     modal.style.display = "none";
 }
 

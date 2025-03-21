@@ -7,6 +7,12 @@ body {
     padding: 0;
 }
 
+/* Background image filter */
+/* .page1-background-image-fade
+{
+    filter: brightness(10%);
+} */
+
 /* Portfolio Grid */
 .portfolio {
     display: grid;
