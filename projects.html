@@ -4,17 +4,471 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <meta name="description" content="Default Portfolio Page">
+    <meta name="author" content="JRX Dark Rose Development">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/Default_Icon_1024x1024.jpg">
+    <title>Justin Rioux - Dev Portfolio</title>
+
+    <!-- Styles -->
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/mystyles.css" rel="stylesheet">
+
+    <link href="css/scss/cssAnim.scss" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="css/less/styleLess.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+
+    <!-- <script src="assets/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/js/brands.min.js"></script> -->
+    <script src="assets/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/js/all.js"></script>
 </head>
 
-<body>
-    <h1>My Projects</h1>
-    <ul>
-        <li><a href="project1.html">Project 1</a></li>
-        <li><a href="project2.html">Project 2</a></li>
-        <li><a href="project3.html">Project 3</a></li>
-    </ul>
-    <a href="index.html#page3">Back to Home</a>
+<body class="body-full-page">
+
+    <div class="loader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <!-- Content CLick Capture-->
+
+    <div class="click-capture"></div>
+
+
+    <!-- Sidebar Menu -->
+    <!-- ---------------- Sidebar Menu ---------------- -->
+    <div class="menu">
+        <span class="close-menu icon-cross2 right-boxed"></span>
+        <!-- <div class="menu-lang right-boxed">
+            <a href="" class="active">Eng</a>
+            <a href="">Fra</a>
+            <a href="">Ger</a>
+        </div> -->
+        <ul class="menu-list right-boxed">
+            <li data-menuanchor="page1">
+                <a href="index.html#page">Home</a>
+            </li>
+            <li data-menuanchor="page2">
+                <a href="index.html#page2">Specialization</a>
+            </li>
+            <li data-menuanchor="page3">
+                <a href="index.html#page3">Projects</a>
+            </li>
+            <li data-menuanchor="page4">
+                <a href="index.html#page4">Services</a>
+            </li>
+            <li data-menuanchor="page6">
+                <a href="index.html#page6">Reviews</a>
+            </li>
+            <li data-menuanchor="page7">
+                <a href="index.html#page7">Contact</a>
+            </li>
+        </ul>
+        <div class="menu-footer right-boxed">
+            <div class="social-list">
+                <a href="https://www.linkedin.com/in/justin-rioux-022785335" target="_blank" rel="noopener noreferrer"
+                    class="icon">
+                    <img alt="itch.io Logo" src="images/icons8-linkedin-material-sharp/icons8-linkedin-32.png">
+                </a>
+
+                <a href="https://github.com/3Rioux" target="_blank" rel="noopener noreferrer" class="icon ">
+                    <img alt="itch.io Logo" src="images/icons8-github-32.png">
+                </a>
+
+                <a href="https://rx-game-dev.itch.io/" target="_blank" rel="noopener noreferrer" class="icon">
+                    <img alt="itch.io Logo" src="images/icons8-itch-io-32.png">
+                </a>
+                <!-- Itch.io logo FROM https://icons8.com/icons/set/itch-io--white -->
+            </div>
+            <div class="copy">
+                <!--© Jonny 2017. All Rights Reseverd<br> ??? its open source so i dont think this is necessary but ill include the designed by-->
+                Original Temp Design by LoganCee
+            </div>
+        </div>
+    </div>
+    <!-- ---------------- Sidebar Menu ---------------- -->
+
+    <!-- Navbar -->
+    <!-- ************************************* Header Modifications ******************************************* -->
+    <header class="navbar navbar-2 navbar-white boxed">
+        <div class="navbar-bg"></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"
+            aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html#page1">
+            <img class="brand-img" alt="" src="images/Default_Logo_1024x1024.jpg"> <!-- Logo -->
+            <div class="brand-info">
+                <div class="brand-name">Dark Rose </div> <!-- Brand Name -->
+                <div class="brand-text">Development</div> <!-- Brand Text -->
+            </div>
+        </a>
+
+        <!-- ****************** Modify My Links ************************* -->
+        <div class="social-list hidden-xs">
+            <!-- <a href="" class="icon ion-social-twitter"></a> -->
+            <!-- <a href="" class="icon ion-social-facebook"></a> -->
+            <!-- <a href="" class="icon ion-social-googleplus"></a> -->
+            <a href="https://www.linkedin.com/in/justin-rioux-022785335" target="_blank" rel="noopener noreferrer"
+                class="icon">
+                <img alt="itch.io Logo" src="images/icons8-linkedin-material-sharp/icons8-linkedin-32.png">
+            </a>
+
+            <a href="https://github.com/3Rioux" target="_blank" rel="noopener noreferrer" class="icon ">
+                <img alt="itch.io Logo" src="images/icons8-github-32.png">
+            </a>
+
+            <a href="https://rx-game-dev.itch.io/" target="_blank" rel="noopener noreferrer" class="icon">
+                <img alt="itch.io Logo" src="images/icons8-itch-io-32.png">
+            </a>
+            <!-- Itch.io logo FROM https://icons8.com/icons/set/itch-io--white -->
+        </div>
+        <!-- ****************** Modify My Links ************************* -->
+    </header>
+    <!-- ************************************* Header Modifications ******************************************* -->
+
+
+    <!-- Copyright message -->
+    <div class="copy-bottom white boxed">© Justin Rioux
+        2025<!--© Jonny 2017. ??? its open source so i dont think this is necessary but ill include the designed by-->
+    </div>
+
+
+
+    <!-- Page Content -->
+    <div class="pagepiling">
+        <!-- ---------------- Projects Section ---------------- -->
+        <div data-anchor="page1" class="pp-scrollable text-white section section-1">
+            <div class="scroll-wrap">
+
+                <!-- Project Background Images -->
+                <div class="bg-changer">
+                    <div class="section-bg" style="background-image:url(images/bg/bg2.jpg);"></div>
+                    <div class="section-bg" style="background-image:url(images/bg/bg2-2.jpg);"></div>
+                    <div class="section-bg" style="background-image:url(images/bg/bg2-3.jpg);"></div>
+                    <div class="section-bg" style="background-image:url(images/bg/bg2-4.jpg);"></div>
+                    <div class="section-bg" style="background-image:url(images/bg/bg2-5.jpg);"></div>
+                    <div class="section-bg" style="background-image:url(images/bg/bg2-6.jpg);"></div>
+                </div>
+                <!-- Project Background Images -->
+
+                <div class="scrollable-content">
+                    <div class="vertical-centred">
+                        <div class="boxed boxed-inner">
+                            <div class="boxed">
+                                <!-- <div class="intro"> -->
+                                <div class="row">
+                                    <div class="col-md-12">
+
+                                        <h2 class="title-uppercase text-white">Featured Works</h2>
+
+                                        <section class="portfolio row-project-box">
+
+                                            <div class="projectPage-box" data-title="Fredericton Museum Website" data-team="5"
+                                                data-role="Front-end & Back-end Developer, Database Design, "
+                                                data-skills="Worked on the "
+                                                data-tools="PHP, HTML, CSS, JavaScript, MySQL,
+                                                Microsoft Access, Microsoft SQL Server Manager,
+                                                Github, Visual Studio 2019, WampServer64" 
+                                                data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+                                                
+                                                    <h3>Fredericton Museum Website</h3>
+                                                    <p>Team Size: 5</p>
+                                                    <p>Role: Frontend Developer</p>
+                                              
+                                            </div>
+
+                                            <!-- -------- Project BOX -------- -->
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+                                            <!-- -------- Project BOX -------- -->
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="Website" data-team="3"
+                                                data-role="Frontend Developer"
+                                                data-skills="Responsive Design, API Integration, UI/UX"
+                                                data-tools="HTML, CSS, JavaScript, Figma" data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                            <div class="projectPage-box" data-title="My Portfolio Website" data-team="3"
+                                                data-role="Front-end & Back-end Developer"
+                                                data-skills="Responsive Design,
+                                                 Color Pallet Creation, Theme Design, AI Image Generation, More Comming"
+                                                data-tools="HTML, CSS, JavaScript, AI Image Generation (Canvas Dream Lab & Dall-E 3), Visual Studio Code (Favorite Attachents Used: Live Preview)"
+                                                data-links='{
+                                                        "GitHub": "https://github.com/example",
+                                                        "Itch.io": "https://itch.io/example",
+                                                        "Portfolio": "https://www.frederictonregionmuseum.com/"
+                                                    }' data-images='[
+                                                    "images/Projects/Default/bg2-2.jpg",
+                                                    "images/Projects/Default/bg2-3.jpg",
+                                                    "images/Projects/Default/bg2-4.jpg",
+                                                    "images/Projects/Default/bg2-5.jpg",
+                                                    "images/Projects/Default/bg2-6.jpg"
+                                                    ]'>
+
+                                                <h3>Project Title 1</h3>
+                                                <p>Team Size: 3</p>
+                                                <p>Role: Frontend Developer</p>
+                                            </div>
+
+                                        </section>
+                                        <!-- Expanded Project Modal -->
+                                        <div id="project-modal" class="modal">
+
+                                            <div class="modal-content">
+                                                <!-- <div> -->
+                                                <!-- <span class="button-close">&times;</span> -->
+                                                <!-- <span class="close"><a class="close-button-less">Close</a></span> -->
+                                                <!-- </div> -->
+
+                                                <!-- <h2 id="modal-title"></h2> -->
+                                                <div class="modal-header">
+                                                    <h2 id="modal-title"></h2>
+                                                    <div class="modal-links" id="modal-links"></div>
+                                                </div>
+                                                <h2><strong>Team Size:</strong> <span id="modal-team"></span></h2>
+                                                <p><strong>Role:</strong> <span id="modal-role"></span></p>
+
+                                                <!-- Links -->
+                                                <div class="modal-section">
+                                                    <h3>Related Links</h3>
+                                                    <ul id="modal-links"></ul>
+                                                </div>
+
+                                                <!-- Image Carousel -->
+                                                <div class="carousel">
+                                                    <button id="prev-btn">&#10094;</button>
+                                                    <div id="image-container"></div>
+                                                    <button id="next-btn">&#10095;</button>
+                                                </div>
+
+                                                <!-- Skills -->
+                                                <div class="modal-section">
+                                                    <h3>Skills Learned</h3>
+                                                    <p id="modal-skills"></p>
+                                                </div>
+
+                                                <!-- Tools Used -->
+                                                <div class="modal-section">
+                                                    <h3>Tools & Technologies</h3>
+                                                    <p id="modal-tools"></p>
+                                                </div>
+
+                                                <!-- <span class="popupCloseButton"><a class="close-button-less">Close</a></span> -->
+                                                <span class="close"><a class="close-button-less">Close</a></span>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+
+        <p>Footer section</p>
+
+
+    </footer>
+
+
+    <!-- jQuery -->
+
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                                                                                                                                                                                                                                                                                                                                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                                                                                                                                                                                                                                                                                                                                crossorigin="anonymous"></script> -->
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.pagepiling.js"></script>
+
+
+
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/projectScripts.js"></script>
+
 </body>
 
 </html>

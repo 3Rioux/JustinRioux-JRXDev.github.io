@@ -1,0 +1,82 @@
+.transition (@prop: all, @time: 1s, @ease: ease-out) {
+    -webkit-transition : @prop @time @ease;
+    -moz-transition    : @prop @time @ease;
+    -ms-transition     : @prop @time @ease;
+    -o-transition      : @prop @time @ease;
+    transition         : @prop @time @ease;
+  }
+  .rotate(@degrees) {
+    -webkit-transform : rotate(@degrees);
+    -moz-transform    : rotate(@degrees);
+    -ms-transform     : rotate(@degrees);
+    -o-transform      : rotate(@degrees);
+    transform         : rotate(@degrees);
+  }
+  
+  .square( @size ){
+    width: @size;
+    height: @size;
+  }
+  
+  @black : #000;
+  @white : #fff;
+  @buttonSize : 50px;
+
+  // ---- [ Close Button ] ---- //
+  .close-button-less{
+    .square(@buttonSize);
+    box-shadow : 0px 10 10px 10px rgba( 0, 0, 0, .25 );
+    border-radius: 10px; 
+    //background : @black;
+    background-color: #c300ff;
+    //left       : 80%;
+    top: 10px;
+    right: 15px;
+    // top        : 50%;
+    margin-top : -@buttonSize/2;
+    margin-left: -@buttonSize + (@buttonSize/2);
+    position   : absolute;
+    display    : block;
+    // z-index    : auto;
+    text-indent : -9999px;
+    cursor: pointer;
+
+    &:before,
+    &:after{
+      content    : '';
+      width      : 55%;
+      height     : 2px;
+      background : @white;
+      position   : absolute;
+      top        : 48%;
+      left       : 22%;
+      .rotate(-45deg);
+      .transition( @time : 0.3s );
+    }
+  
+    &:after{
+      .rotate(45deg);
+      .transition( @time : 0.3s );
+    }
+  
+  
+  
+    &:hover{
+      &:before,
+      &:after{
+        .rotate(180deg);
+      }
+    }
+  }
+  
+  
+//   body{
+//     background: #a7cfdf;
+//   background: -moz-linear-gradient(45deg,  #a7cfdf 0%, #23538a 100%);
+//   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#a7cfdf), color-stop(100%,#23538a));
+//   background: -webkit-linear-gradient(45deg,  #a7cfdf 0%,#23538a 100%);
+//   background: -o-linear-gradient(45deg,  #a7cfdf 0%,#23538a 100%);
+//   background: -ms-linear-gradient(45deg,  #a7cfdf 0%,#23538a 100%);
+//   background: linear-gradient(45deg,  #a7cfdf 0%,#23538a 100%);
+//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 );
+//   }
