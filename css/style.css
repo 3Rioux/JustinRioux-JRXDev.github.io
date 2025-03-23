@@ -5934,6 +5934,7 @@ a.brand:focus {
   height: 100%;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 
 .vertical-title {

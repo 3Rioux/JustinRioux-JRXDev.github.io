@@ -201,6 +201,93 @@ button:hover {
 }
 
 
+/* === index.html === 
+ Honeycomb Background Animation 
+*/
 
+/* Affect All honeycomb elements  */
+.global-honeycomb-elements {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
+/* Bottom Layer body */
+.honeycomb-body {
+    background-color: #3c12e4;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-content: center;
+    font-family: Montserrat;
+    overflow: hidden;
 
+}
+
+#pattern {
+    position: absolute;
+    top: -44px;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+}
+
+#gradient {
+    background: radial-gradient(#a81947, transparent 50%);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    transform: translate(200px, 200px);
+}
+
+#gradient-full {
+    /* background: radial-gradient(#ff8811, transparent 99%); */
+    background: content-box radial-gradient(#000000b6, rgba(130, 8, 212, 0.329));
+    /* background: linear-gradient(#610522e1, #1511ff6c); */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.hexagon-shape {
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+    background: #3B8686;
+}
+
+.hexagon {
+    opacity: 0.7;
+}
+
+.hexagon:hover {
+    opacity: 0.25;
+    transform: scale(0.9);
+}
+
+/* .hexagon::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    background: radial-gradient(circle 10vmax at var(--cursorX) var(--cursorY),
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, .15) 15%,
+            rgba(0, 0, 0, .95) 100%)
+} */
+
+/* .hexagon::before {
+    position: absolute;
+    border-radius: 50%;
+    width: 500%;
+    height: 500%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid green;
+} */
