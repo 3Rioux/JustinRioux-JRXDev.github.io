@@ -2320,11 +2320,12 @@ a.brand:focus {
   width: 100%;
   height: 100%;
   padding: 2.14rem 1.928rem;
+  background: #09090995; 
 }
 
 .project-box h5 {
   margin: 0;
-  color: #fff;
+  color: #fff; 
 }
 
 .project-category {
@@ -2339,7 +2340,8 @@ a.brand:focus {
 }
 
 .project-box:hover h5 {
-  color: #000;
+  /* color: #000; */
+  color: #fff;  
 }
 
 .project-box:hover .project-category {
@@ -6171,7 +6173,8 @@ a.brand:focus {
 }
 
 .project-box:hover h5 {
-  color: #000;
+  /* color: #000; */
+  color: #fff;  
 }
 
 .project-box:hover .project-category {
