@@ -1,0 +1,18 @@
+.field {
+    position: relative;
+}
+
+/* This is the animation here */
+label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease; 
+}
+/* when input is selected(focused) move the lable to 0*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+    top: 0;
+}
+
+
