@@ -5,6 +5,7 @@
 /* This is the animation here */
 label {
     position: absolute;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     transition: all 0.5s ease; 
@@ -12,7 +13,18 @@ label {
 /* when input is selected(focused) move the lable to 0*/
 input:not(:placeholder-shown) + label,
 input:focus + label {
-    top: 0;
+    /* More custom stylised example ->  */
+    /* top: -10%;
+    left: -1%; */
+    /* Or just top:0; works great as a default */
+    top:0;
 }
+
+/* button */
+.tempbuttonclass {
+    position: absolute;
+    size: auto;
+}
+
 
 
