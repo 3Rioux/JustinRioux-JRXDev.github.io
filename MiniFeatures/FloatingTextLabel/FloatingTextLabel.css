@@ -22,7 +22,7 @@ input:focus + label {
 
 /* button */
 .tempbuttonclass {
-    position: absolute;
+    position: relative;
     size: auto;
 }
 
