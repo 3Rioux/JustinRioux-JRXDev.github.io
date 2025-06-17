@@ -1,0 +1,33 @@
+.typewriter-text {
+    overflow: hidden; /* Ensures the text is hidden until it is revealed */
+    border-right: 0.15em solid orange; /* Creates the cursor effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0 auto; /* Centers the text */
+    animation: typing 4s steps(30, end) alternate infinite,
+    blink-caret 0.5s step-end infinite; /* Animation for typing and blinking cursor */
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Starts with no text visible */
+    }
+    to {
+        width: 100%; /* Reveals the full text */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Hides the cursor */
+    }
+    50% {
+        border-color: orange; /* Shows the cursor */
+    }
+}
+
+
+
+
+
+
+
