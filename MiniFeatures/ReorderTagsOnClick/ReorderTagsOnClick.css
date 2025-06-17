@@ -1,0 +1,25 @@
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.tag {
+    background-color: #b088d7a2;
+    border: #6615b8 2px solid;
+    border-radius: 5px;
+}
+
+.tag:has(.checkbox:checked) {
+    order: -1; /* Move checked tags to the front */
+    background-color: #6615b8;
+    color: white;
+}
+
+
