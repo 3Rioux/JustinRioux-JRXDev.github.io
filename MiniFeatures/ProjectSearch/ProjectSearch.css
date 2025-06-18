@@ -1,0 +1,98 @@
+/* Container for tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* Tag style */
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    border-radius: 2em;
+    background: #222831;
+    color: #fff;
+    border: 1.5px solid #393e46;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    user-select: none;
+    min-width: 0;
+    min-height: 2em;
+    font-weight: 500;
+    position: relative;
+    gap: 0.5em;
+}
+
+.tag:hover {
+    background: #393e46;
+    border-color: #00adb5;
+    color: #00fff5;
+}
+
+/* Hide the checkbox visually but keep it accessible */
+.tag .checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Selected tag style using :has() */
+.tag:has(.checkbox:checked),
+.tag.selected {
+    background: #00adb5;
+    color: #222831;
+    border-color: #00fff5;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,173,181,0.15);
+}
+
+/* Project list styles */
+#projectList {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.project {
+    background: #23272f;
+    border-radius: 1em;
+    padding: 1.2em 1.5em;
+    box-shadow: 0 2px 8px rgba(34,40,49,0.07);
+    color: #fff;
+    transition: box-shadow 0.2s;
+}
+
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #00adb5;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.project div {
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    color: #eeeeee;
+}
+
+input#searchInput {
+    width: 100%;
+    padding: 0.7em 1em;
+    border-radius: 2em;
+    border: 1.5px solid #393e46;
+    background: #23272f;
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input#searchInput:focus {
+    border-color: #00adb5;
+}
