@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.category {
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #35424a;
+}
+
+.project {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    margin: 0;
+    color: #35424a;
+}
+
+.project .description {
+    font-size: 0.9em;
+    color: #666666;
+}
+
+.project .categories {
+    font-size: 0.8em;
+    color: #007bff;
+    margin: 5px 0;
+}
+
+.project .skills,
+.project .role,
+.project .team-count {
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .project {
+        padding: 10px;
+    }
+}
