@@ -2,41 +2,25 @@
     {
         "name": "Project Alpha",
         "type": ["Web Development", "Mobile App"],
-        "skills": ["JavaScript", "React", "Node.js"]
-    },
-    {
-        "name": "Project Beta",
-        "type": ["Data Science"],
-        "skills": ["Python", "Pandas", "Machine Learning"]
-    },
-    {
-        "name": "Project Gamma",
-        "type": ["Web Development"],
-        "skills": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-        "name": "Project Delta",
-        "type": ["Mobile App"],
-        "skills": ["Swift", "iOS", "Xcode"]
-    },
-    {
-        "name": "Project Epsilon",
-        "type": ["Game Development"],
-        "skills": ["C#", "Unity", "Game Design"]
-    },
-    {
-        "name": "Portfolio Website",
-        "typeTags": ["Web App"],
-        "skillTags": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-        "name": "Indie Game",
-        "typeTags": ["Game"],
-        "skillTags": ["Unity", "C#"]
-    },
-    {
-        "name": "Productivity Tool",
-        "typeTags": ["Tool"],
-        "skillTags": ["Python", "Tkinter"]
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "media": [
+            {
+                "src": "../../images/CarouselProjectImages/project-alpha/1.jpg",
+                "type": "image"
+            },
+            {
+                "src": "../../images/CarouselProjectImages/project-alpha/2.jpg",
+                "type": "image"
+            },
+            {
+                "src": "../../images/CarouselProjectImages/project-alpha/demo.mp4",
+                "type": "video"
+            }
+        ]
     }
+
 ]

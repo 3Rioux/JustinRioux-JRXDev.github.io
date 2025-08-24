@@ -40,6 +40,26 @@ $(document).ready(function () {
     //     ).join(' '));
     // }
 
+    function getProjectMediaHtml(mediaArr, projectIndex) {
+        if (!Array.isArray(mediaArr) || mediaArr.length === 0) return '';
+        let mediaHtml = '';
+        mediaArr.forEach((item, i) => {
+            if (item.type === 'image') {
+                //mediaHtml += `<img src="${item.src}" class="carousel-media" data-index="${i}" style="display:${i === 0 ? 'block' : 'none'};max-width:100%;border-radius:0.5em;" alt="Project media ${i + 1}">`;
+                mediaHtml += `<img src="${item.src}" data-index="${i}" class="carousel-media project__multimedia_cropping--image" alt="Project media ${i + 1}"/>`
+            } else if (item.type === 'video') {
+                mediaHtml += `<video src="${item.src}" class="carousel-media" data-index="${i}" style="display:${i === 0 ? 'block' : 'none'};max-width:100%;border-radius:0.5em;" controls></video>`;
+            }
+        });
+        return `
+            <div class=" project_multimedia carousel" data-project="${projectIndex}">
+                ${mediaHtml}
+                <button class="carousel-prev" data-project="${projectIndex}">&#8592;</button>
+                <button class="carousel-next" data-project="${projectIndex}">&#8594;</button>
+            </div>
+        `;
+    }
+
     // Render projects
     function renderProjects() {
         const search = $('#searchInput').val().toLowerCase();
@@ -64,13 +84,65 @@ $(document).ready(function () {
             return;
         }
 
-        $('#projectList').html(filtered.map(p =>
-            `<div class="project">
-                <h3>${p.name}</h3>
-                <div><strong>Type:</strong> ${(p.typeTags || []).join(', ')}</div>
-                <div><strong>Skills:</strong> ${(p.skillTags || []).join(', ')}</div>
-            </div>`
-        ).join(''));
+        // $('#projectList').html(filtered.map((p, idx) => {
+        //     const mediaHtml = p.media ? getProjectMediaHtml(p.media, idx) : '';
+        //     return `
+        //         <div class="project">
+        //             <h3>${p.name}</h3>
+        //             <div class="content_skill"><strong>Type:</strong> ${(p.typeTags || p.type || []).join(', ')}</div>
+        //             <div><strong>Skills:</strong> ${(p.skillTags || p.skills || []).join(', ')}</div>
+        //             ${mediaHtml}
+        //         </div>
+        //     `;
+        // }).join(''));
+        $('#projectList').html(filtered.map((p, idx) => {
+            const mediaHtml = p.media ? getProjectMediaHtml(p.media, idx) : '';
+            // Render Type tags
+            const typeArr = p.typeTags || p.type || [];
+            const typeHtml =
+                typeArr.map(t => `<p class="content_skill">${t}</p>`).join('');
+            // Render Skill tags
+            const skillArr = p.skillTags || p.skills || [];
+            const skillHtml = `<div class="skills_list">` +
+                skillArr.map(s => `<p class="content_skill">${s}</p>`).join('') +
+                `</div>`;
+            return `
+                <div class="project">
+                    <h3>${p.name}</h3>
+                    <div><strong>Type:</strong> ${typeHtml}</div>
+                    <div><strong>Skills:</strong> ${skillHtml}</div>
+                    ${mediaHtml}
+                </div>
+            `;
+        }).join(''));
+
+        // $('#projectList').html(filtered.map(p =>
+        //     `<div class="project">
+        //         <h3>${p.name}</h3>
+        //         <div><strong>Type:</strong> ${(p.typeTags || []).join(', ')}</div>
+        //         <div><strong>Skills:</strong> ${(p.skillTags || []).join(', ')}</div>
+        //     </div>`
+        // ).join(''));
+
+        // Carousel logic
+        $('#projectList').off('click', '.carousel-prev').on('click', '.carousel-prev', function () {
+            const projectIdx = $(this).data('project');
+            const $carousel = $(`.carousel[data-project="${projectIdx}"]`);
+            const $media = $carousel.find('.carousel-media');
+            let current = $media.index($media.filter(':visible'));
+            $media.eq(current).hide();
+            current = (current - 1 + $media.length) % $media.length;
+            $media.eq(current).show();
+        });
+        $('#projectList').off('click', '.carousel-next').on('click', '.carousel-next', function () {
+            const projectIdx = $(this).data('project');
+            const $carousel = $(`.carousel[data-project="${projectIdx}"]`);
+            const $media = $carousel.find('.carousel-media');
+            let current = $media.index($media.filter(':visible'));
+            $media.eq(current).hide();
+            current = (current + 1) % $media.length;
+            $media.eq(current).show();
+        });
     }
 
     // Search input event
