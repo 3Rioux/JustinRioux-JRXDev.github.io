@@ -479,10 +479,27 @@ label.error {
 }
 
 .link-arrow {
-  display: inline-block;
+  /* display: inline-block; */
+  float: right;
   color: #000;
   line-height: 1 !important;
   font-weight: 600;
+}
+
+.all-projects-link {
+  /* display: inline-flex; */
+  /* push link to the right */
+  align-self: flex-end;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1.8rem;
+
+  align-items: center;
+  gap: 0.25rem;
+  transition: background 0.2s;
 }
 
 .link-arrow-2 {
@@ -517,7 +534,7 @@ label.error {
 
 .link-arrow:hover,
 .link-arrow-2:hover {
-  color: #7E1891;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -1118,7 +1135,13 @@ a.brand:focus {
   margin: 6rem 0;
 }
 
-
+/* Ensure stacked columns always fill full width */
+@media (max-width: 768px) {
+  .col-project-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
 
 @media (min-width: 992px) {
   .experience-box {
@@ -1781,6 +1804,10 @@ a.brand:focus {
   float: right;
 }
 
+.intro {
+  margin-bottom: 20%;
+}
+
 .section .intro {
   opacity: 0;
   -webkit-transition: opacity 1s 0.3s ease;
@@ -1951,15 +1978,69 @@ a.brand:focus {
   top: 7.4rem;
 }
 
+/* Make sure the row aligns all columns equally */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .row-project-box {
   margin-top: -30px;
+  margin-bottom: 1rem;
 }
 
 .col-project-box {
-  margin-top: 30px;
+  display: flex;
+  margin-top: 20px;
+  /* THIS IS THE line that makes the card rows different sizes  */
+  flex: 1 0 auto;
 }
 
 .project-box {
+  display: flex;
+  flex-direction: column;
+  /* push footer to bottom */
+  justify-content: space-between;
+  /* make cards uniform inside grid */
+  flex-grow: 1;
+
+  padding: 1rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background: #11111192;
+  color: #ffffff;
+  text-decoration: none;
+  /* prevents text from spilling */
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.project-box-inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-box h5 {
+  margin-bottom: 0.5rem;
+}
+
+.project-category {
+  margin-bottom: 0.25rem;
+}
+
+.project-footer {
+  /* sticks to bottom */
+  margin-top: auto;
+  text-align: right;
+  color: aqua;
+}
+
+
+/* .project-box {
   display: block;
   padding-bottom: 30%;
   position: relative;
@@ -1976,32 +2057,15 @@ a.brand:focus {
   width: 100%;
   height: 100%;
   padding: 2.14rem 1.928rem;
-}
-
-.project-box h5 {
-  margin: 0;
-  color: #fff;
-}
-
-.project-category {
-  color: #cccccc;
-  margin-top: 0.5rem;
-}
+} */
 
 .project-box:hover {
-  background: #E390AE;
+  background: #e390aed0;
   text-decoration: none;
   border-color: transparent;
 }
 
-.project-box:hover h5 {
-  /* color: #000; */
-  color: #fff;
-}
 
-.project-box:hover .project-category {
-  color: #666666;
-}
 
 .link-arrow.h5 {
   text-transform: uppercase;
@@ -3501,9 +3565,9 @@ a.brand:focus {
   /* Homepage v2 */
 
 
-  .project-box {
+  /* .project-box {
     padding-bottom: 75%;
-  }
+  } */
 
   .row-contact-info {
     margin-top: -2rem;
